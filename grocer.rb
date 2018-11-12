@@ -15,7 +15,7 @@ def consolidate_cart(cart)
         consol[name] ||= info
         consol[name][attribute] = value
         consol[name][:count] ||= 0
-        consol[name][:count] += 1
+        # consol[name][:count] += 1
         binding.pry
       end
     end
