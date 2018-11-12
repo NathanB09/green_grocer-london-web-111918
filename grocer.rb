@@ -11,12 +11,13 @@ def consolidate_cart(cart)
   cart.each_with_object({}) do |item, consol|
     item.each do |name, info|
       info.each do |attribute, value|
+        binding.pry
         consol[name] ||= {}
         consol[name] = info
         consol[name][attribute] = value
         consol[name][:count] = 0
         consol[name][:count] += 1
-        binding.pry
+        # binding.pry
       end
     end
   end
