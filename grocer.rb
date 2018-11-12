@@ -3,10 +3,12 @@ def consolidate_cart(cart)
   cart.each_with_object({}) do |item, consol|
     item.each do |name, info|
       info.each do |attribute, value|
+        if consol.include?(name)
+          consol[name][:count] += 1
+        end
         consol[name] ||= {}
         consol[name][attribute] ||= value
         consol[name][:count] ||= 1
-        consol[name][:count] += 1
       end
     end
   end
