@@ -6,8 +6,6 @@ cart = [
   {"KALE"    => {:price => 3.0, :clearance => false}}
 ]
 
-consolidate_cart(cart)
-
 def consolidate_cart(cart)
   # code here
   cart.each_with_object({}) do |item, consol|
@@ -22,6 +20,7 @@ def consolidate_cart(cart)
     end
   end
 end
+consolidate_cart(cart)
 
 def apply_coupons(cart, coupons)
   # code here
