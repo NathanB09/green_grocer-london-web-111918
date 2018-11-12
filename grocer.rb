@@ -7,6 +7,7 @@ def consolidate_cart(cart)
       info.each do |attribute, value|
         consol[name] ||= {}
         consol[name][attribute] ||= value
+        consol[name][:count] = 0
         consol[name][:count] += 1
       end
     end
