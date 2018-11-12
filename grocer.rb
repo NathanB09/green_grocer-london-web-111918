@@ -8,9 +8,7 @@ cart = [
 
 def consolidate_cart(cart)
   # code here
-  consol = {}
-  # cart.each_with_object({}) do |item, consol|
-  cart.each do |item|
+  cart.each_with_object({}) do |item, consol|
     item.each do |name, info|
       info.each do |attribute, value|
         # binding.pry
