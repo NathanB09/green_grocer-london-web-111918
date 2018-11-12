@@ -1,7 +1,7 @@
 def consolidate_cart(cart)
   # code here
   cart.each_with_object({}) do |item, consol|
-    itam.each do |name, info|
+    item.each do |name, info|
       info.each do |attribute, value|
         consol[name] ||= {}
         consol[name][attribute] ||= value
