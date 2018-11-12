@@ -1,5 +1,15 @@
 def consolidate_cart(cart)
   # code here
+  cart.each_with_object({}) do |item, consol|
+    itam.each do |name, info|
+      info.each do |attribute, value|
+        consol[name] ||= {}
+        consol[name][attribute] ||= value
+        consol[name][:count] ||= 1
+        consol[name][:count] += 1 
+      end
+    end
+  end
 end
 
 def apply_coupons(cart, coupons)
