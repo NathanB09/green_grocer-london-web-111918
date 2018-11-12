@@ -6,7 +6,7 @@ def consolidate_cart(cart)
         consol[name] ||= {}
         consol[name][attribute] ||= value
         consol[name][:count] ||= 1
-        consol[name][:count] += 1 
+        consol[name][:count] += 1
       end
     end
   end
