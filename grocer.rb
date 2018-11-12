@@ -1,5 +1,13 @@
 require "pry"
 
+cart = [
+  {"AVOCADO" => {:price => 3.0, :clearance => true }},
+  {"AVOCADO" => {:price => 3.0, :clearance => true }},
+  {"KALE"    => {:price => 3.0, :clearance => false}}
+]
+
+consolidate_cart(cart)
+
 def consolidate_cart(cart)
   # code here
   cart.each_with_object({}) do |item, consol|
@@ -9,6 +17,7 @@ def consolidate_cart(cart)
         consol[name][attribute] ||= value
         consol[name][:count] = 0
         consol[name][:count] += 1
+        binding.pry
       end
     end
   end
